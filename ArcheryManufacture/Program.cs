@@ -19,10 +19,10 @@
                 Console.WriteLine("Where do You want to go: \r\n 1. Warehouse \r\n 2. Workshop \r\n 3. Exit");
 
                 Console.WriteLine("= = = = = = = = ");
-                var chooseFromFirstMenu = Console.ReadLine();
+                var chooseFromMainMenu = Console.ReadLine();
                 Console.WriteLine("= = = = = = = = ");
 
-                switch (chooseFromFirstMenu)
+                switch (chooseFromMainMenu)
                 {
                     case "1":
                         Console.WriteLine("Welcome to Warehouse.");
@@ -41,7 +41,7 @@
                         break;
                 }
 
-                if (chooseFromFirstMenu == "1")
+                if (chooseFromMainMenu == "1")
                 {
                     Console.WriteLine("What Do You Want To Do? : ");
                     Console.WriteLine("1. Add Item To Warehouse.");
@@ -49,10 +49,10 @@
                     Console.WriteLine("3. To See List Of Items In Warehouse");
 
                     Console.WriteLine("= = = = = = = = ");
-                    var chooseFromSecondMenu = Console.ReadLine();
+                    var chooseFromWarehouseMenu = Console.ReadLine();
                     Console.WriteLine("= = = = = = = = ");
 
-                    if (chooseFromSecondMenu == "1")
+                    if (chooseFromWarehouseMenu == "1")
                     {
                         Console.WriteLine("Please Type The Name Of Item,\r\n ... Or Type END To Finish.");
                         Console.WriteLine("= = = = = = = = ");
@@ -66,7 +66,7 @@
                             warehouseItems.Add(input);
                         }
                     }
-                    else if (chooseFromSecondMenu == "2")
+                    else if (chooseFromWarehouseMenu == "2")
                     {
                         Console.WriteLine("This Is The List Of Items In Warehouse... ");
                         if (warehouseItems.Count == 0)
@@ -101,7 +101,7 @@
                             Console.WriteLine(items);
                         }
                     }
-                    else if (chooseFromSecondMenu == "3")
+                    else if (chooseFromWarehouseMenu == "3")
                     {
                         Console.WriteLine("So... What We Have Hire:");
                         if (warehouseItems.Count == 0)
@@ -118,7 +118,7 @@
                         }
                     }
                 }
-                else if (chooseFromFirstMenu == "2")
+                else if (chooseFromMainMenu == "2")
                 {
 
                     Console.WriteLine("What Do You Want To Create? : ");
@@ -127,10 +127,10 @@
                     Console.WriteLine("3. Archery Target.");
 
                     Console.WriteLine("= = = = = = = = ");
-                    var chooseFromThirdMenu = Console.ReadLine();
+                    var chooseFromWorkshopMenu = Console.ReadLine();
                     Console.WriteLine("= = = = = = = = ");
 
-                    if (chooseFromThirdMenu == "1")
+                    if (chooseFromWorkshopMenu == "1")
                     {
                         Console.WriteLine("If You Want To Create The Bow - You Need Below Mentioned Materials: \r\n WOOD, THREAD, OIL, ANIMAL HORN.");
                         Console.WriteLine("= = = = = = = = ");
@@ -161,7 +161,7 @@
                         }
                     }
 
-                    if (chooseFromThirdMenu == "2")
+                    if (chooseFromWorkshopMenu == "2")
                     {
                         Console.WriteLine("If You Want To Create Dozen Arrows - You Need Below Mentioned Materials: \r\n WOOD, METAL, FEATHER.");
                         Console.WriteLine("= = = = = = = = ");
@@ -191,7 +191,7 @@
                         }
                     }
 
-                    if (chooseFromThirdMenu == "3")
+                    if (chooseFromWorkshopMenu == "3")
                     {
                         Console.WriteLine("If You Want To Create The Archery Target - You Need Below Mentioned Material: \r\n WOOD.");
                         Console.WriteLine("= = = = = = = = ");
@@ -218,7 +218,7 @@
                         }
                     }
                 }
-                else if (chooseFromFirstMenu == "3")
+                else if (chooseFromMainMenu == "3")
                 {
                     Console.WriteLine("Press any key to live.");
                     CloseApp = true;
