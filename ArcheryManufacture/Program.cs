@@ -23,18 +23,18 @@ namespace ArcheryManufacture
                 switch (chooseFromMainMenu)
                 {
                     case "1":
-                        Console.WriteLine("Welcome to Warehouse.");
-                        MenuManager.ShowWarehouseMenu(warehouse);
+                        Console.WriteLine("Welcome To Warehouse.");
+                        MenuSets.ShowWarehouseMenu(warehouse);
                         break;
                     case "2":
-                        Console.WriteLine("Welcome to Workshop.");
-                        MenuManager.ShowWorkshopMenu(workshop, warehouse);
+                        Console.WriteLine("Welcome To Workshop.");
+                        MenuSets.ShowWorkshopMenu(workshop, warehouse);
                         break;
                     case "3":
                         closeApp = true;
                         break;
                     default:
-                        Console.WriteLine("Check what You have chosen.");
+                        Console.WriteLine("Check What You Have Chosen.");
                         Console.WriteLine("- - - - - - - - - - - - - - ");
                         break;
                 }
