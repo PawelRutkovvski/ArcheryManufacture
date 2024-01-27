@@ -72,7 +72,7 @@ namespace ArcheryManufacture
             }
             else if (chooseFromWorkshopMenu == "3")
             {
-                workshop.CreateDozenOfArrows(warehouse);
+                workshop.CreateArcheryTarget(warehouse);
             }
             else Console.WriteLine("Check Your Decision, Please.");
 

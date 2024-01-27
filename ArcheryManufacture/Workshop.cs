@@ -27,6 +27,10 @@
                     Console.WriteLine("You Can Not Create A Bow :-/ ");
                 }
             }
+            else
+            {
+                Console.WriteLine("...ok then...");
+            }
         }
 
         public void CreateDozenOfArrows(Warehouse warehouse)
@@ -48,11 +52,15 @@
                     warehouse.AddItem("DOZEN OF ARROWS");
                     warehouse.RemoveItems(new List<string> { "WOOD", "METAL", "FEATHER" });
                 }
+                else
+                {
+                    Console.WriteLine("Sorry, You Do Not Have All Needed Materials.");
+                    Console.WriteLine("You Can Not Create Dozen Of Arrows :-/ ");
+                }
             }
             else
             {
-                Console.WriteLine("Sorry, You Do Not Have All Needed Materials.");
-                Console.WriteLine("You Can Not Create Dozen Of Arrows :-/ ");
+                Console.WriteLine("...ok then...");
             }
         }
 
@@ -62,24 +70,28 @@
             Console.WriteLine("= = = = = = = = ");
             Console.WriteLine("Do You Want To Try To Create Archery Target ? ");
             Console.WriteLine("Type YES or NO : ");
-            var yesOrNoType = Console.ReadLine();
+            var yesOrNoType = Console.ReadLine().ToUpper();
 
             if (yesOrNoType == "YES")
             {
-                bool itemsForArcheryTaret = warehouse.ContainsItems(new List<string> { "WOOD" });
+                bool itemsForArcheryTarget = warehouse.ContainsItems(new List<string> { "WOOD" });
 
-                if (itemsForArcheryTaret)
+                if (itemsForArcheryTarget)
                 {
                     Console.WriteLine("You Have All Needed Materials, so You Created Archery Target. \r\n CONGRATULATION :-) ");
                     Console.WriteLine("Archery Target Has Been Created and Added To Warehouse");
                     warehouse.AddItem("ARCHERY TARGET");
                     warehouse.RemoveItem("WOOD");
                 }
+                else
+                {
+                    Console.WriteLine("Sorry, You Do Not Have All Needed Materials.");
+                    Console.WriteLine("You Can Not Create Archery Target :-/ ");
+                }
             }
             else
             {
-                Console.WriteLine("Sorry, You Do Not Have All Needed Materials.");
-                Console.WriteLine("You Can Not Create Archery Target :-/ ");
+                Console.WriteLine("...ok then...");
             }
         }
     }
