@@ -37,12 +37,17 @@
             Console.Write("Type YES or NO : ");
             var yesOrNoType = Console.ReadLine().ToUpper();
 
-            if(yesOrNoType == "YES")
+            if (yesOrNoType == "YES")
             {
-                Console.WriteLine("You Have All Needed Materials, so You Created Dozen Of Arrows. \r\n CONGRATULATION :-) ");
-                Console.WriteLine("Dozen Of Arrows Has Been Added to Warehouse");
-                warehouse.AddItem("DOZEN OF ARROWS");
-                warehouse.RemoveItems(new List<string> { "WOOD", "METAL HEAD", "FEATHER" });
+                bool itemsForDozenOfArrows = warehouse.ContainsItems(new List<string> { "WOOD", "METAL", "FEATHER" });
+
+                if (itemsForDozenOfArrows)
+                {
+                    Console.WriteLine("You Have All Needed Materials, so You Created Dozen Of Arrows. \r\n CONGRATULATION :-) ");
+                    Console.WriteLine("Dozen Of Arrows Has Been Added to Warehouse");
+                    warehouse.AddItem("DOZEN OF ARROWS");
+                    warehouse.RemoveItems(new List<string> { "WOOD", "METAL", "FEATHER" });
+                }
             }
             else
             {
@@ -61,10 +66,20 @@
 
             if (yesOrNoType == "YES")
             {
-                Console.WriteLine("You Have All Needed Materials, so You Created Archery Target. \r\n CONGRATULATION :-) ");
-                Console.WriteLine("Archery Target Has Been Created and Added To Warehouse");
-                warehouse.AddItem("ARCHERY TARGET");
-                warehouse.RemoveItem("WOOD");
+                bool itemsForArcheryTaret = warehouse.ContainsItems(new List<string> { "WOOD" });
+
+                if (itemsForArcheryTaret)
+                {
+                    Console.WriteLine("You Have All Needed Materials, so You Created Archery Target. \r\n CONGRATULATION :-) ");
+                    Console.WriteLine("Archery Target Has Been Created and Added To Warehouse");
+                    warehouse.AddItem("ARCHERY TARGET");
+                    warehouse.RemoveItem("WOOD");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Sorry, You Do Not Have All Needed Materials.");
+                Console.WriteLine("You Can Not Create Archery Target :-/ ");
             }
         }
     }
